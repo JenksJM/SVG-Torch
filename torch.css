@@ -1,0 +1,28 @@
+.svgTourch {
+  position: relative;
+  cursor: none;
+  --cursorX: -10000000vw;
+  --cursorY: -10000000vh;
+}
+
+/* Tourch overley */
+.svgTourch img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.svgTourch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: radial-gradient(circle 10vmax at var(--cursorX) var(--cursorY),
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 80%,
+      rgba(0, 0, 0, 0.95) 100%
+  );
+}
