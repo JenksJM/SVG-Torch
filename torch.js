@@ -25,16 +25,16 @@ class torchSVG {
     }
 
     //update Torch Position
-    updateTorchPosition = e => {
+    updateTorchPosition(e){
         var x = e.clientX || e.touches[0].clientX;
         var y = e.clientY || e.touches[0].clientY;
-        var offset = document.getElementById(this._elementID).getBoundingClientRect();
+        var offset = document.getElementById(this.id).getBoundingClientRect();
 
         x = x - offset.left;
         y = y - offset.top;
 
-        document.getElementById(this._elementID).style.setProperty('--cursorX', x + 'px')
-        document.getElementById(this._elementID).style.setProperty('--cursorY', y + 'px')
+        document.getElementById(this.id).style.setProperty('--cursorX', x + 'px')
+        document.getElementById(this.id).style.setProperty('--cursorY', y + 'px')
     }
 
     //Image URL getter/setter
