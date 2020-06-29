@@ -3,6 +3,7 @@
   cursor: none;
   --cursorX: -10000000vw;
   --cursorY: -10000000vh;
+  touch-action: none;
 }
 
 /* Tourch overley */
