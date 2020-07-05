@@ -55,7 +55,6 @@ class torchSVG {
 
     //parentElementID getter/setter
     get parentElementID() {
-        document.getElementById("passage").innerHTML = "Paragraph changed!";
         this._parentElementID = x;
     }
 }
