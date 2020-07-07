@@ -4,6 +4,9 @@ class torchSVG {
         this._elementID = documentID;
         this._parentElementID = location;
         this._torchDiameter = 10;
+        this._backgroundOpacity = 0.95;
+        this._torchOpacity = 0.5;
+        this._torchSharpness = 80;
     }
 
     // Methods
@@ -11,12 +14,15 @@ class torchSVG {
     //initialse torch
     initTorch(){
         this.outputImage();
-        this.initialiseTorchDiameter();
+        this.initialiseCustomTorchFeatures();
         this.addEventListeners();
     }
 
-    initialiseTorchDiameter(){
+    initialiseCustomTorchFeatures(){
         document.getElementById(this._elementID).style.setProperty('--circleDiameter', this._torchDiameter + 'vmax');
+        document.getElementById(this._elementID).style.setProperty('--backgroundOpacity', this._backgroundOpacity);
+        document.getElementById(this._elementID).style.setProperty('--torchOpacity', this._torchOpacity);
+        document.getElementById(this._elementID).style.setProperty('--torchSharpness', this._torchSharpness + '%');
     }
 
     //image and holder output
@@ -60,6 +66,30 @@ class torchSVG {
     }
     set torchDiameter(x) {
         this._torchDiameter = x;       
+    }
+
+    //torch diameter URL getter/setter
+    get backgroundOpacity() {
+        return this._backgroundOpacity;
+    }
+    set backgroundOpacity(x) {
+        this._backgroundOpacity = x;       
+    }
+
+    //torch diameter URL getter/setter
+    get torchOpacity() {
+        return this._torchOpacity;
+    }
+    set torchOpacity(x) {
+        this._torchOpacity = x;       
+    }
+
+    //torch diameter URL getter/setter
+    get torchSharpness() {
+        return this._torchSharpness;
+    }
+    set torchSharpness(x) {
+        this._torchSharpness = x;       
     }
 
     //elementID getter/setter

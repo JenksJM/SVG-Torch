@@ -5,6 +5,13 @@
   --cursorY: -10000000vh;
   --circleDiameter: 10vmax;
   touch-action: none;
+
+  /* torch opacities */
+  --backgroundOpacity: 0.95;
+  --torchOpacity: 0.5;
+
+  /* torch opacities */
+  --torchSharpness: 80%;
 }
 
 /* Tourch overley */
@@ -24,7 +31,7 @@
   z-index: 1;
   background: radial-gradient(circle var(--circleDiameter) at var(--cursorX) var(--cursorY),
       rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.5) 80%,
-      rgba(0, 0, 0, 0.95) 100%
+      rgba(0, 0, 0, var(--torchOpacity)) var(--torchSharpness),
+      rgba(0, 0, 0, var(--backgroundOpacity)) 100%
   );
 }
