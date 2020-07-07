@@ -3,12 +3,21 @@ class torchSVG {
         this._imageURL = url;
         this._elementID = documentID;
         this._parentElementID = location;
-
-        this.outputImage();
-        this.addEventListeners();
+        this._torchDiameter = 10;
     }
 
     // Methods
+
+    //initialse torch
+    initTorch(){
+        this.outputImage();
+        this.initialiseTorchDiameter();
+        this.addEventListeners();
+    }
+
+    initialiseTorchDiameter(){
+        document.getElementById(this._elementID).style.setProperty('--circleDiameter', this._torchDiameter + 'vmax');
+    }
 
     //image and holder output
     outputImage() {
@@ -39,10 +48,18 @@ class torchSVG {
 
     //Image URL getter/setter
     get imageURL() {
-        return this._imageURL;image
+        return this._imageURL;
     }
     set imageURL(x) {
         this._imageURL = x;
+    }
+
+    //torch diameter URL getter/setter
+    get torchDiameter() {
+        return this._torchDiameter;
+    }
+    set torchDiameter(x) {
+        this._torchDiameter = x;       
     }
 
     //elementID getter/setter
@@ -55,6 +72,9 @@ class torchSVG {
 
     //parentElementID getter/setter
     get parentElementID() {
+       return this._parentElementID;
+    }
+    set parentElementID(x) {
         this._parentElementID = x;
     }
 }
