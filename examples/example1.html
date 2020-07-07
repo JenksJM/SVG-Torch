@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Example 1</title>
+    <script src="../torch.js"></script>
+    <link rel="stylesheet" type="text/css" href="../torch.css">
+</head>
+
+<body>
+    <div id="holder" style="margin:auto; width:500px;">
+    </div>
+
+</body>
+
+</html>
+<script>
+    myTourch = new torchSVG("img/svgTorchImage.jpg", "dark-image-id", "holder");
+    myTourch.torchDiameter = 6;
+    myTourch.backgroundOpacity = 1;
+    myTourch.torchOpacity = 0.5;
+    myTourch.torchSharpness = 60;
+    myTourch.initTorch();
+</script>
