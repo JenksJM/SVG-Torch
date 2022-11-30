@@ -37,7 +37,12 @@
 ## About The Project
 
 After a trip to the aquarium I felt it this hover and discover might be a cool way to view images. I hope you have fun with it!
+<br />
+<br />
 
+<p align="center">
+    <img src="videos/svg-torch.gif" />
+</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/jenksjm/SVG-Torch?style=for-the-badge
