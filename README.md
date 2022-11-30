@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/JenksJM/SVG-Torch">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">SVG Torch</h3>
@@ -29,6 +29,8 @@
     <a href="https://github.com/JenksJM/SVG-Torch/issues">Request Feature</a>
   </p>
 </div>
+
+
 
 
 <!-- ABOUT THE PROJECT -->
